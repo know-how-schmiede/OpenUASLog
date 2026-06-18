@@ -1,0 +1,28 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      OPENUASLOG_DATABASE_URL: sqlite:////app/data/openuaslog.db
+      OPENUASLOG_SECRET_KEY: ${OPENUASLOG_SECRET_KEY:-change-this-secret-in-production}
+      OPENUASLOG_INITIAL_ADMIN_USERNAME: ${OPENUASLOG_INITIAL_ADMIN_USERNAME:-admin}
+      OPENUASLOG_INITIAL_ADMIN_EMAIL: ${OPENUASLOG_INITIAL_ADMIN_EMAIL:-admin@example.com}
+      OPENUASLOG_INITIAL_ADMIN_PASSWORD: ${OPENUASLOG_INITIAL_ADMIN_PASSWORD:-admin}
+      OPENUASLOG_CORS_ORIGINS: http://localhost:8080
+    volumes:
+      - openuaslog-data:/app/data
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    depends_on:
+      - backend
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+
+volumes:
+  openuaslog-data:

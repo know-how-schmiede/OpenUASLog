@@ -1,0 +1,15 @@
+{
+  "manufacturer": "DJI",
+  "model": "Mavic 3",
+  "variant": "Classic",
+  "category": "Kameradrohne",
+  "drone_class": "C1",
+  "weight_g": 895,
+  "max_flight_time_min": 46,
+  "max_speed_kmh": 75.6,
+  "battery_type": "DJI Intelligent Flight Battery",
+  "camera_info": "4/3 CMOS Hasselblad",
+  "typical_use": "Foto, Video, Inspektion und Dokumentation",
+  "description": "Beispielvorlage für die lokale Entwicklung.",
+  "is_active": true
+}

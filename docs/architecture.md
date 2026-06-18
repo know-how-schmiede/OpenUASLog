@@ -32,6 +32,10 @@ Dieses Dokument beschreibt die technische Architektur von OpenUASLog. Die Anwend
 - nachvollziehbare Herkunft aufgelöster Werte
 - selbst hostbares Deployment
 
+### Authentifizierung
+
+Das MVP verwendet signierte, zeitlich begrenzte Bearer-Token. Passwörter werden mit PBKDF2-HMAC-SHA256 und einem individuellen Salt gespeichert. Autorisierungsprüfungen erfolgen im Backend sowohl anhand der Rolle als auch anhand der Eigentümerschaft eines Datensatzes.
+
 ---
 
 ## Systemübersicht
@@ -502,13 +506,20 @@ open-uas-log/
 │  │  │  ├─ database.py
 │  │  │  └─ init_db.py
 │  │  ├─ models/
+│  │  │  ├─ user.py
+│  │  │  ├─ drone_type.py
+│  │  │  ├─ drone.py
+│  │  │  └─ flight.py
 │  │  ├─ schemas/
 │  │  ├─ services/
 │  │  │  ├─ drone_value_resolver.py
 │  │  │  ├─ flight_duration.py
 │  │  │  └─ export_service.py
 │  │  └─ main.py
-│  └─ requirements.txt
+│  ├─ tests/
+│  ├─ Dockerfile
+│  ├─ requirements.txt
+│  └─ requirements-dev.txt
 ├─ frontend/
 │  ├─ src/
 │  │  ├─ api/
@@ -518,6 +529,8 @@ open-uas-log/
 │  │  ├─ App.tsx
 │  │  └─ main.tsx
 │  ├─ package.json
+│  ├─ Dockerfile
+│  ├─ nginx.conf
 │  └─ vite.config.ts
 ├─ docs/
 │  ├─ architecture.md
@@ -527,6 +540,7 @@ open-uas-log/
 │  └─ README.md
 ├─ templates/
 │  └─ drone-types/
+├─ .env.example
 ├─ docker-compose.yml
 ├─ LICENSE
 ├─ README.md
@@ -546,3 +560,9 @@ Materialprofil → konkretes Material
 ```
 
 Die Architektur dient deshalb zugleich als überschaubares Referenzprojekt für API-first Anwendungen mit Rollenverwaltung, Formularvalidierung, Tabellen, Filtern, Exporten und Docker-Deployment.
+
+---
+
+## Abgrenzung der Version 0.1.0
+
+Die Modelle und APIs für Akkus, Flug-Akku-Zuordnungen und Wartungen sind bewusst noch nicht implementiert. Diese Funktionen gehören gemäß Roadmap zu Version 0.2. Die Version 0.1.0 bildet eine lauffähige Grundlage aus Benutzern, Drohnen-Typen, konkreten Drohnen, Flügen, Dashboard und CSV-Export.

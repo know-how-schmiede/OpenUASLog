@@ -1,0 +1,12 @@
+{
+  "manufacturer": "DJI",
+  "model": "Mini 4 Pro",
+  "category": "Kameradrohne",
+  "drone_class": "C0",
+  "weight_g": 249,
+  "max_flight_time_min": 34,
+  "battery_type": "DJI Intelligent Flight Battery",
+  "typical_use": "Foto, Video, Training und Dokumentation",
+  "description": "Beispielvorlage für die lokale Entwicklung.",
+  "is_active": true
+}
