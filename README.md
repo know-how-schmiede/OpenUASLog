@@ -1,0 +1,2 @@
+# OpenUASLog
+OpenUASLog is a self-hosted open-source web application for documenting UAS and drone flights, drones, drone type templates, batteries and maintenance records. It is built with FastAPI, React, Vite, TypeScript and MUI. The application uses a template-based drone model: administrators maintain general drone types, while users create their own drones from these templates and can override individual fields.
