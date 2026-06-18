@@ -20,6 +20,11 @@ Die zentrale Versionsnummer befindet sich in [`version.py`](../version.py).
 - Änderungshistorie in `docs/timeline.md` eingeführt.
 - Root-README um Funktionsumfang, Schnellstart, Entwicklung und Konfiguration ergänzt.
 - Architekturdokumentation an die implementierte MVP-Struktur angepasst.
+- Anfängerfreundliche Setup-Anleitung in `docs/setup.md` ergänzt.
+- Schritt-für-Schritt-Anleitung für manuelle und automatisierte Tests in `docs/devtest.md` ergänzt.
+- Dokumentationsindex und Root-README um die neuen Anleitungen erweitert.
+- Lokalen Link zur API-Dokumentation auf `/api/docs` korrigiert.
+- Swagger-Autorisierung auf direkte Bearer-Token-Eingabe abgestimmt.
 
 ### Backend
 

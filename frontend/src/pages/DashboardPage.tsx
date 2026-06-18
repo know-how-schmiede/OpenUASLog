@@ -1,4 +1,5 @@
-import { Alert, Card, CardContent, Grid, Skeleton, Typography } from '@mui/material'
+import { Alert, Card, CardContent, Skeleton, Typography } from '@mui/material'
+import Grid from '@mui/material/Grid2'
 import { useEffect, useState } from 'react'
 import { api } from '../api/client'
 import { PageHeader } from '../components/PageHeader'

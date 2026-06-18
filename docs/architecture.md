@@ -534,8 +534,10 @@ open-uas-log/
 │  └─ vite.config.ts
 ├─ docs/
 │  ├─ architecture.md
+│  ├─ devtest.md
 │  ├─ project-description.md
 │  ├─ roadmap.md
+│  ├─ setup.md
 │  ├─ timeline.md
 │  └─ README.md
 ├─ templates/

@@ -129,6 +129,9 @@ celerybeat.pid
 
 # Environments
 .env
+.env.*
+!.env.example
+!.env.*.example
 .venv
 env/
 venv/
@@ -178,6 +181,59 @@ backend/data/
 backend/tests/*.db
 frontend/node_modules/
 frontend/dist/
+
+# Secrets, credentials and private cryptographic material
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.kdbx
+*.ovpn
+id_rsa
+id_rsa.*
+id_dsa
+id_dsa.*
+id_ecdsa
+id_ecdsa.*
+id_ed25519
+id_ed25519.*
+credentials.json
+credentials.*.json
+service-account*.json
+service_account*.json
+client_secret*.json
+secrets/
+.secrets/
+.aws/
+.azure/
+.config/gcloud/
+.netrc
+_netrc
+.npmrc
+
+# Local configuration that may contain credentials
+config.local.*
+settings.local.*
+*.local.yml
+*.local.yaml
+docker-compose.override.yml
+compose.override.yml
+
+# Runtime databases, exports, logs and backups
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+*.sqlite-journal
+*.dump
+*.sql
+*.bak
+*.backup
+*.log
+logs/
+data/
 
 # Cursor  
 #  Cursor is an AI-powered code editor.`.cursorignore` specifies files/directories to 

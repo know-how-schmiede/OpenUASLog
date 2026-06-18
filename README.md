@@ -62,7 +62,7 @@ python -m pip install -r requirements-dev.txt
 python -m uvicorn app.main:app --reload
 ```
 
-Die API läuft standardmäßig unter <http://localhost:8000>. Die interaktive Dokumentation befindet sich unter <http://localhost:8000/docs>.
+Die API läuft standardmäßig unter <http://localhost:8000>. Die interaktive Dokumentation befindet sich unter <http://localhost:8000/api/docs>.
 
 Tests:
 
@@ -101,6 +101,8 @@ Die Standardzugangsdaten `admin` / `admin` dienen ausschließlich der lokalen En
 - [Projektbeschreibung](docs/project-description.md)
 - [Architektur](docs/architecture.md)
 - [Roadmap](docs/roadmap.md)
+- [Setup-Anleitung](docs/setup.md)
+- [Entwicklungs- und Testanleitung](docs/devtest.md)
 - [Änderungshistorie](docs/timeline.md)
 
 ## Rechtlicher Hinweis
